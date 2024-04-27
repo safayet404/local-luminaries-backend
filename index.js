@@ -12,17 +12,15 @@ const cookieParser = require("cookie-parser")
 const morgan = require("morgan")
 const cors = require('cors')
 
-<<<<<<< HEAD
 connectDB()
 app.use(cors())
-=======
+
 const corsConfig = {
     origin : "*",
     credential : true,
     methods : ["GET","POST","PUT","DELETE"]
 }
 app.use(cors(corsConfig))
->>>>>>> 33fdf80 (change in tour model)
 app.use(morgan("dev"))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:false}))
@@ -51,11 +49,4 @@ app.use(errorHandler)
 
 app.listen(PORT, ()=>{{
     console.log(`Server is running at PORT `)
-
-<<<<<<< HEAD
-=======
-app.listen(PORT,()=>{{
-    console.log(`Server is running PORT`)
-
->>>>>>> 33fdf80 (change in tour model)
 }})
