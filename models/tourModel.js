@@ -29,4 +29,5 @@ var tourSchema = new mongoose.Schema({
 });
 
 //Export the model
+//checkiung it working or not
 module.exports = mongoose.model('Tour', tourSchema);
