@@ -7,8 +7,8 @@ const router = express.Router()
 router.post("/create-destination",createDestination)
 router.get("/all-destination",getAllDestination)
 router.get("/single-destination/:id",getSingleDestination)
-router.put("/update-destination",updateDestination)
-router.delete("/delete-destination",deleteDestination)
+router.put("/update-destination/:id",updateDestination)
+router.delete("/delete-destination/:id",deleteDestination)
 
 
 module.exports = router
