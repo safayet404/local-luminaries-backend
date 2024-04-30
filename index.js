@@ -32,7 +32,7 @@ const contactRouter = require('./routes/contactRoutes')
 const teamRouter = require('./routes/teamRoutes')
 const tourRouter = require('./routes/tourRoutes')
 const videoRouter = require('./routes/videoRoutes')
-
+const destinationRouter = require("./routes/destinationRoutes")
 app.use('/api/user',userRouter)
 app.use('/api/activity',activityRouter)
 app.use('/api/popular',popularRouter)
@@ -41,6 +41,7 @@ app.use('/api/team',teamRouter)
 app.use('/api/tour',tourRouter)
 app.use('/api/video',videoRouter)
 app.use('/api/contact',contactRouter)
+app.use('/api/destination',destinationRouter)
 
 
 app.use(cookieParser())
