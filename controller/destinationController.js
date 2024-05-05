@@ -35,11 +35,11 @@ const getSingleDestination = asyncHandler(async(req,res)=>{
 })
 
 const updateDestination = asyncHandler(async(req,res)=>{
+
     try{
         const {id} = req.params
-
-        const destinationUpdate = await Destination.findById(id,req.body,{new : true})
-        res.json(destinationUpdate)
+        const update = await Destination.findByIdAndUpdate(id,req.body,{new : true})
+        res.json(update)
     }catch(error)
     {
         throw new Error(error)
