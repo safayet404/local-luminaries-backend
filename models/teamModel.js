@@ -20,7 +20,7 @@ var teamSchema = new mongoose.Schema({
         facebookLink : {
             type : String
         },
-        LinkedinLink : {
+        linkedinLink : {
             type : String
         },
         instagramLink : {
