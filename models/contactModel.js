@@ -19,6 +19,11 @@ var contactSchema = new mongoose.Schema({
         type:String,
         required:true,
     },
+    status:{
+        type:String,
+        default  : "Submitted",
+        enum : ["Submitted","Contacted","In Progress","Resolved"]
+    },
 });
 
 //Export the model
