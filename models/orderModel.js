@@ -45,6 +45,10 @@ var orderSchema = new mongoose.Schema({
         required : true
     },
     
+    price : {
+        type : Number,
+        required : true
+    },
     totalAmount : {
         type : Number,
         required : true
