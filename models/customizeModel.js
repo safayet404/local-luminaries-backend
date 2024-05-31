@@ -9,6 +9,10 @@ var userSchema = new mongoose.Schema({
         type:Number,
         required:true,   
     },
+    duration : {
+        type : Number,
+        required : true
+    },
     date:{
         type:Date,
         required:true,
