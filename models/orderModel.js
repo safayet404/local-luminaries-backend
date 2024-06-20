@@ -40,6 +40,10 @@ var orderSchema = new mongoose.Schema({
         type : mongoose.Schema.Types.ObjectId,
         ref : "Tour"
     },
+    userId : {
+        type : mongoose.Schema.Types.ObjectId,
+        ref : "User"
+    },
     person : {
         type : Number,
         required : true

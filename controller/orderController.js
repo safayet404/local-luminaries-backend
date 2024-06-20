@@ -13,7 +13,7 @@ const createOrder = asyncHandler(async(req,res)=>{
 
 const getAllOrder = asyncHandler(async(req,res)=>{
     try{
-        const allOrder = await Order.find()
+        const allOrder = await Order.find().populate('tourId')
         res.json(allOrder)
     }catch(error)
     {
@@ -24,13 +24,24 @@ const getAllOrder = asyncHandler(async(req,res)=>{
 const getSingleOrder = asyncHandler(async(req,res)=>{
     try{
         const {id} = req.params
-        const singleOrder = await Order.findById(id)
+        const singleOrder = await Order.findById(id).populate('tourId')
         res.json(singleOrder)
     }catch(error)
     {
         throw new Error(error)
     }
 }) 
+const orderByUser = asyncHandler(async(req,res)=>{
+    try{
+        const {userId} = req.params
+        const userOrder = await Order.findOne({userId : userId}).populate('tourId')
+        res.json(userOrder)
+
+    }catch(error)
+    {
+        throw new Error(error)
+    }
+})
 
 const updateOrder = asyncHandler(async(req,res)=>{
     try{
@@ -59,5 +70,6 @@ module.exports ={
     getAllOrder,
     getSingleOrder,
     updateOrder,
-    deleteOrder
+    deleteOrder,
+    orderByUser
 }
