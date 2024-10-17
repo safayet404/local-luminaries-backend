@@ -34,7 +34,7 @@ const getSingleOrder = asyncHandler(async(req,res)=>{
 const orderByUser = asyncHandler(async(req,res)=>{
     try{
         const {userId} = req.params
-        const userOrder = await Order.findOne({userId : userId}).populate('tourId')
+        const userOrder = await Order.find({userId : userId}).populate('tourId')
         res.json(userOrder)
 
     }catch(error)
