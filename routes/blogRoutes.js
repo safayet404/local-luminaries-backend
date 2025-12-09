@@ -3,7 +3,7 @@ const { createBlog, getAllBlog, getSingleBlog, deleteBlog, updateBlog } = requir
 
 const router = express.Router()
 
-router.post("/create-blog",createBlog)
+router.post("/create-blog/id",createBlog)
 router.get("/all-blog",getAllBlog)
 router.get("/single-blog/:id",getSingleBlog)
 router.put("/update-blog/:id",updateBlog)
