@@ -9,4 +9,6 @@ router.get("/single-blog/:id",getSingleBlog)
 router.put("/update-blog/:id",updateBlog)
 router.delete("/delete-blog/:id",deleteBlog)
 
+router.delete("/delete-blog",deleteBlog)
+
 module.exports = router
