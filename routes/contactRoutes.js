@@ -9,4 +9,6 @@ router.get("/single-contact/:id",getSingleContact)
 router.put("/update-contact/:id",updateContact)
 router.delete("/delete-contact/:id",deleteContact)
 
+router.delete("/delete-contact/:id",deleteContact
+
 module.exports = router
