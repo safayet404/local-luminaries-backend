@@ -10,5 +10,7 @@ router.get("/single-destination/:id",getSingleDestination)
 router.put("/update-destination/:id",updateDestination)
 router.delete("/delete-destination/:id",deleteDestination)
 
+router.delete("/delete-destination/:id",deleteDestination)
+
 
 module.exports = router
