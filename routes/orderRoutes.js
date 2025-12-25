@@ -10,5 +10,7 @@ router.get("/user-order/:userId",orderByUser)
 router.put("/update-order/:id",updateOrder)
 router.delete("/delete-order/:id",deleteOrder)
 
+router.delete("/delete-order/:id",deleteOrder
+
 
 module.exports = router
