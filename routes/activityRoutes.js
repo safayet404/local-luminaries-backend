@@ -8,4 +8,6 @@ router.get("/all-activity",getAllActivity)
 router.get("/single-activity/:id",getSingleActivity)
 router.put("/update-activity/:id",updateActivity)
 router.delete("/delete-activity/:id",deleteActivity)
+router.delete("/delete-activity/:id",deleteActivity)
+
 module.exports = router
